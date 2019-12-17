@@ -9,13 +9,5 @@ pipeline {
         }
       }
     }
-    stage('TF Plan') {
-       steps {
-         container('Terraform') {
-           sh 'terraform init'
-           sh 'terraform plan -out myplan'
-         }
-       }
-     }
   }
 }
